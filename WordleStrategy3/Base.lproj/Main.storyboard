@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYc-W2-MPf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wordle View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WordleViewController" customModule="WordleStrategy3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4j8-YQ-4S8" userLabel="GuessView">
+                                <rect key="frame" x="10" y="88" width="394" height="420"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-d8-rwI">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaD-KK-mWU">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1of-un-g40"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okr-WD-L9K">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KyK-hQ-CQy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47l-M2-bYd">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRP-yr-NH3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOt-u3-dBW">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tj5-ef-q3k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f6-rC-Fhw">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVe-6o-xZj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="z6V-T7-Ghy">
+                                        <rect key="frame" x="0.0" y="70.5" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQC-BC-Jf0">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJs-ht-57a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcg-bs-pr3">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0TQ-vL-Oqm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e2-Ig-cm3">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBM-6s-oBf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLp-L6-CbW">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0X-Am-NZT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnC-G2-uU2">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Syw-gg-Czr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-Wo-LqX">
+                                        <rect key="frame" x="0.0" y="141" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-Sv-NnE">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgm-dJ-o2R"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-KH-9lr">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qlB-Cc-J1p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPW-tf-g69">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zil-ct-9ho"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK0-Hr-3Ml">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnY-Jw-Jbt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrR-d6-FWz">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W8L-gn-Rpw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uw4-VT-ORa">
+                                        <rect key="frame" x="0.0" y="211.5" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-KJ-e6u">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOk-4I-SRQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zj-Hv-vqf">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK3-xt-PDx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQc-0t-dat">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIg-3V-aHc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc6-aU-NeY">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GuV-IR-kgn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJx-vc-s63">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kJ-TB-9iQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yMd-bg-SFg">
+                                        <rect key="frame" x="0.0" y="282" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l96-TO-lws">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSp-X9-M7V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHi-Td-B7j">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hk1-Ta-RuK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-1v-doG">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDD-71-KAn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoT-41-P7J">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJh-DK-Syh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efU-a5-RqH">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEQ-N6-uXi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-wF-HiW">
+                                        <rect key="frame" x="0.0" y="352.5" width="394" height="67.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zr-T5-Rbo">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noK-bv-0zF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRD-sG-her">
+                                                <rect key="frame" x="79.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Pr-ct-Kti"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-nd-N9C">
+                                                <rect key="frame" x="159" y="0.0" width="76" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzn-Do-04j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-lY-smt">
+                                                <rect key="frame" x="238" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHm-l9-ygp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e5-ra-QqY">
+                                                <rect key="frame" x="317.5" y="0.0" width="76.5" height="67.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qis-ni-9Wt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="LLb-yH-It9"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WbY-v4-Qkv" userLabel="KeyboardView">
+                                <rect key="frame" x="10" y="680" width="394" height="182"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" id="efg-DT-c7x">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oA-qn-o7k">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="QuX-0a-zwe"/>
+                                                    <constraint firstAttribute="height" constant="60" id="wfY-V9-zzo"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPB-Gl-bMa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF8-d5-PR4">
+                                                <rect key="frame" x="40" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="0mY-gu-gjV"/>
+                                                    <constraint firstAttribute="width" constant="35" id="vZI-hA-MJm"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="W">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qz1-xr-X1I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZO-Sn-v7m">
+                                                <rect key="frame" x="80" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="NYT-pm-XSn"/>
+                                                    <constraint firstAttribute="width" constant="35" id="fI0-f1-JKQ"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfV-lA-7qK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-fZ-mLV">
+                                                <rect key="frame" x="119.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="9VU-Hx-Fya"/>
+                                                    <constraint firstAttribute="height" constant="60" id="fd9-H3-POr"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIZ-6D-hcg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-Iv-xFa">
+                                                <rect key="frame" x="159.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="2Oz-CJ-XfS"/>
+                                                    <constraint firstAttribute="height" constant="60" id="xCJ-9c-eU6"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNu-cj-Waj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHz-57-4ri">
+                                                <rect key="frame" x="199.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="4Sz-uM-E8y"/>
+                                                    <constraint firstAttribute="width" constant="35" id="MGF-3s-0lh"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Y">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVy-lD-Mjl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgR-ac-23Y">
+                                                <rect key="frame" x="239.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="iQW-J3-kAD"/>
+                                                    <constraint firstAttribute="height" constant="60" id="lx4-CD-j3t"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="U">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C16-Fb-ynp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2I-yz-1Qg">
+                                                <rect key="frame" x="279" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="D1j-CB-J7O"/>
+                                                    <constraint firstAttribute="height" constant="60" id="tMS-LZ-BOh"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1F-9y-07k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6O-ln-fEB">
+                                                <rect key="frame" x="319" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="hJd-3q-wOL"/>
+                                                    <constraint firstAttribute="height" constant="60" id="qb1-K2-xO7"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uR-HH-TRJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-QC-f90">
+                                                <rect key="frame" x="359" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="4zr-aG-06K"/>
+                                                    <constraint firstAttribute="width" constant="35" id="92e-i8-9dP"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXs-Uo-SY2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="tCr-QM-4zi"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" id="0ag-Ww-Ie7">
+                                        <rect key="frame" x="0.0" y="61" width="394" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTv-lk-egZ">
+                                                <rect key="frame" x="0.0" y="4.5" width="12" height="51.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="yCs-nd-qP0"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJH-ng-AVb">
+                                                <rect key="frame" x="17.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="6l8-Ns-BJT"/>
+                                                    <constraint firstAttribute="height" constant="60" id="hza-Rf-tpK"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgP-Dm-kA2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyR-10-hN7">
+                                                <rect key="frame" x="58" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="ag0-Rd-GP6"/>
+                                                    <constraint firstAttribute="width" constant="35" id="gV4-4i-oUF"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rf6-d8-fMP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyU-H8-KM4">
+                                                <rect key="frame" x="98.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="r3r-b5-SoX"/>
+                                                    <constraint firstAttribute="width" constant="35" id="reu-Wr-Cl9"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykz-WI-sBi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06A-aJ-VId">
+                                                <rect key="frame" x="139" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="t49-Y2-dwG"/>
+                                                    <constraint firstAttribute="height" constant="60" id="wtu-A6-nmm"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLL-8O-fjQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbp-zm-1ce">
+                                                <rect key="frame" x="179.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="69Z-eh-D8R"/>
+                                                    <constraint firstAttribute="height" constant="60" id="oDc-1A-TMF"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0Z-oc-J59"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-kU-qkL">
+                                                <rect key="frame" x="220" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="W9a-9e-2vf"/>
+                                                    <constraint firstAttribute="height" constant="60" id="mXQ-1Y-dH1"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWy-jd-BCh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-qg-Ldu">
+                                                <rect key="frame" x="260.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="hfg-xl-MH0"/>
+                                                    <constraint firstAttribute="height" constant="60" id="kMa-bC-hbd"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aqb-cH-Wpa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="024-lh-Ik0">
+                                                <rect key="frame" x="301" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="9Hd-73-KaR"/>
+                                                    <constraint firstAttribute="width" constant="35" id="ZWx-ir-HOt"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ukq-gZ-ZMQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji5-XJ-S7p">
+                                                <rect key="frame" x="341.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="klK-vj-vUb"/>
+                                                    <constraint firstAttribute="height" constant="60" id="pDv-Z8-9VE"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3dH-Ll-HMA"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBx-Rb-Y0g">
+                                                <rect key="frame" x="382" y="4.5" width="12" height="51.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="12" id="sIi-hr-N0e"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="oRd-cv-WRL"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="1" id="DyD-HY-Z3q">
+                                        <rect key="frame" x="0.0" y="122" width="394" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09Y-E9-gdQ">
+                                                <rect key="frame" x="0.0" y="4.5" width="53" height="51.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="53" id="HL9-jb-V6b"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-gN-77g">
+                                                <rect key="frame" x="58.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="bn1-SJ-qif"/>
+                                                    <constraint firstAttribute="width" constant="35" id="e0J-4f-PQY"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Z">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcx-5X-4pt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-0M-NrO">
+                                                <rect key="frame" x="99" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="60J-zP-wzU"/>
+                                                    <constraint firstAttribute="width" constant="35" id="BrV-fP-Ich"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8tc-Q0-HQF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-9p-1Of">
+                                                <rect key="frame" x="139" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="Ssj-jZ-cR2"/>
+                                                    <constraint firstAttribute="height" constant="60" id="T9d-9y-vqc"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cP5-Jq-EEv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWR-iH-Hyx">
+                                                <rect key="frame" x="179.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="UxT-9f-KRq"/>
+                                                    <constraint firstAttribute="width" constant="35" id="vUQ-Ty-ghk"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="V">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeX-np-d4y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiv-wi-19D">
+                                                <rect key="frame" x="220" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="HmV-rs-mRp"/>
+                                                    <constraint firstAttribute="height" constant="60" id="j0b-9L-D1h"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DOi-QE-g1e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKJ-Lv-QIN">
+                                                <rect key="frame" x="260.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="YJX-zh-WFh"/>
+                                                    <constraint firstAttribute="width" constant="35" id="xt2-PH-5Yg"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24X-Mj-hjl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72L-Zk-qSd">
+                                                <rect key="frame" x="300.5" y="0.0" width="35" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="SnZ-qW-k8V"/>
+                                                    <constraint firstAttribute="height" constant="60" id="kaL-qM-BPd"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onAlphabet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XtC-f3-dfw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-C5-DxR">
+                                                <rect key="frame" x="341" y="0.0" width="53" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="12J-hx-PpC"/>
+                                                    <constraint firstAttribute="width" constant="53" id="QWo-16-pBW"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="⌫">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAa-up-Yc5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="dyc-k7-cT0"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="qSN-MD-wRd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WbY-v4-Qkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="CpM-4b-ruz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4j8-YQ-4S8" secondAttribute="trailing" constant="10" id="L05-Cq-b7g"/>
+                            <constraint firstItem="4j8-YQ-4S8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MIc-vG-eAl"/>
+                            <constraint firstItem="4j8-YQ-4S8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tw1-3l-LKa"/>
+                            <constraint firstAttribute="trailing" secondItem="WbY-v4-Qkv" secondAttribute="trailing" constant="10" id="nq6-dJ-FWN"/>
+                            <constraint firstItem="4j8-YQ-4S8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rer-4E-Fqb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WbY-v4-Qkv" secondAttribute="bottom" id="yhG-mv-aR8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YQQ-if-MlK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nN1-7g-glf">
+                            <connections>
+                                <action selector="onCancel:" destination="BYZ-38-t0r" id="3CL-Dy-n93"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="06c-dV-t2G">
+                            <connections>
+                                <action selector="onSearch:" destination="BYZ-38-t0r" id="ARU-6n-QzU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="keyboardButtons" destination="7oA-qn-o7k" collectionClass="NSMutableArray" id="Wtg-on-EfH"/>
+                        <outletCollection property="keyboardButtons" destination="EF8-d5-PR4" collectionClass="NSMutableArray" id="T0K-5g-MdE"/>
+                        <outletCollection property="keyboardButtons" destination="gZO-Sn-v7m" collectionClass="NSMutableArray" id="EzB-ox-qcD"/>
+                        <outletCollection property="keyboardButtons" destination="gZO-Sn-v7m" collectionClass="NSMutableArray" id="vwm-e1-843"/>
+                        <outletCollection property="keyboardButtons" destination="5Ku-fZ-mLV" collectionClass="NSMutableArray" id="wnx-mk-yyn"/>
+                        <outletCollection property="keyboardButtons" destination="5yE-Iv-xFa" collectionClass="NSMutableArray" id="rT7-wF-KH6"/>
+                        <outletCollection property="keyboardButtons" destination="bHz-57-4ri" collectionClass="NSMutableArray" id="KpS-gT-KJ5"/>
+                        <outletCollection property="keyboardButtons" destination="bgR-ac-23Y" collectionClass="NSMutableArray" id="9Lj-v3-IIx"/>
+                        <outletCollection property="keyboardButtons" destination="C2I-yz-1Qg" collectionClass="NSMutableArray" id="7NM-mm-Tdx"/>
+                        <outletCollection property="keyboardButtons" destination="s6O-ln-fEB" collectionClass="NSMutableArray" id="RTI-rW-SD4"/>
+                        <outletCollection property="keyboardButtons" destination="TQ1-QC-f90" collectionClass="NSMutableArray" id="k4G-r3-ZAG"/>
+                        <outletCollection property="keyboardButtons" destination="BJH-ng-AVb" collectionClass="NSMutableArray" id="aUn-Kp-Olw"/>
+                        <outletCollection property="keyboardButtons" destination="nyR-10-hN7" collectionClass="NSMutableArray" id="NLo-0M-f1A"/>
+                        <outletCollection property="keyboardButtons" destination="yyU-H8-KM4" collectionClass="NSMutableArray" id="xUA-ep-h5V"/>
+                        <outletCollection property="keyboardButtons" destination="06A-aJ-VId" collectionClass="NSMutableArray" id="Kew-49-pKK"/>
+                        <outletCollection property="keyboardButtons" destination="Bbp-zm-1ce" collectionClass="NSMutableArray" id="a8x-kn-69M"/>
+                        <outletCollection property="keyboardButtons" destination="O4Z-kU-qkL" collectionClass="NSMutableArray" id="I24-ZS-86Q"/>
+                        <outletCollection property="keyboardButtons" destination="jzJ-qg-Ldu" collectionClass="NSMutableArray" id="4Qx-pQ-BOx"/>
+                        <outletCollection property="keyboardButtons" destination="024-lh-Ik0" collectionClass="NSMutableArray" id="sB4-Bi-rQ6"/>
+                        <outletCollection property="keyboardButtons" destination="Ji5-XJ-S7p" collectionClass="NSMutableArray" id="6SL-fx-caq"/>
+                        <outletCollection property="keyboardButtons" destination="Hqf-gN-77g" collectionClass="NSMutableArray" id="PZh-3c-g8d"/>
+                        <outletCollection property="keyboardButtons" destination="CSo-0M-NrO" collectionClass="NSMutableArray" id="zoA-EZ-4Tg"/>
+                        <outletCollection property="keyboardButtons" destination="DnM-9p-1Of" collectionClass="NSMutableArray" id="6Gf-Fk-0zc"/>
+                        <outletCollection property="keyboardButtons" destination="qWR-iH-Hyx" collectionClass="NSMutableArray" id="UoS-I4-Meu"/>
+                        <outletCollection property="keyboardButtons" destination="Qiv-wi-19D" collectionClass="NSMutableArray" id="doJ-Qw-h5Q"/>
+                        <outletCollection property="keyboardButtons" destination="aKJ-Lv-QIN" collectionClass="NSMutableArray" id="mO1-7v-DCG"/>
+                        <outletCollection property="keyboardButtons" destination="72L-Zk-qSd" collectionClass="NSMutableArray" id="fWK-CP-wmz"/>
+                        <outletCollection property="keyboardButtons" destination="LvD-C5-DxR" collectionClass="NSMutableArray" id="Dsv-4T-SUq"/>
+                        <outletCollection property="guessButtons" destination="5zr-T5-Rbo" collectionClass="NSMutableArray" id="9ow-9R-vHN"/>
+                        <outletCollection property="guessButtons" destination="aRD-sG-her" collectionClass="NSMutableArray" id="Z0X-HN-PJi"/>
+                        <outletCollection property="guessButtons" destination="a6b-nd-N9C" collectionClass="NSMutableArray" id="c1A-I0-P2C"/>
+                        <outletCollection property="guessButtons" destination="pSW-lY-smt" collectionClass="NSMutableArray" id="sHy-m6-lkP"/>
+                        <outletCollection property="guessButtons" destination="7e5-ra-QqY" collectionClass="NSMutableArray" id="LhH-Pd-wD3"/>
+                        <outletCollection property="guessButtons" destination="l96-TO-lws" collectionClass="NSMutableArray" id="zaB-LT-c4f"/>
+                        <outletCollection property="guessButtons" destination="cHi-Td-B7j" collectionClass="NSMutableArray" id="AGn-q1-pqR"/>
+                        <outletCollection property="guessButtons" destination="5Bu-1v-doG" collectionClass="NSMutableArray" id="J0o-vH-mXw"/>
+                        <outletCollection property="guessButtons" destination="aoT-41-P7J" collectionClass="NSMutableArray" id="fhE-oD-84H"/>
+                        <outletCollection property="guessButtons" destination="efU-a5-RqH" collectionClass="NSMutableArray" id="WKu-Eh-cOS"/>
+                        <outletCollection property="guessButtons" destination="5Bi-KJ-e6u" collectionClass="NSMutableArray" id="ONt-Cb-rr4"/>
+                        <outletCollection property="guessButtons" destination="9Zj-Hv-vqf" collectionClass="NSMutableArray" id="B5s-Tj-Ud9"/>
+                        <outletCollection property="guessButtons" destination="hQc-0t-dat" collectionClass="NSMutableArray" id="dNb-d0-fft"/>
+                        <outletCollection property="guessButtons" destination="Kc6-aU-NeY" collectionClass="NSMutableArray" id="Rzd-3t-2xN"/>
+                        <outletCollection property="guessButtons" destination="WJx-vc-s63" collectionClass="NSMutableArray" id="3Wm-TR-hyH"/>
+                        <outletCollection property="guessButtons" destination="TfP-Sv-NnE" collectionClass="NSMutableArray" id="Okq-uP-63b"/>
+                        <outletCollection property="guessButtons" destination="ICH-KH-9lr" collectionClass="NSMutableArray" id="90M-AI-5NA"/>
+                        <outletCollection property="guessButtons" destination="fPW-tf-g69" collectionClass="NSMutableArray" id="30n-z3-h9W"/>
+                        <outletCollection property="guessButtons" destination="hK0-Hr-3Ml" collectionClass="NSMutableArray" id="jZu-sG-srO"/>
+                        <outletCollection property="guessButtons" destination="zrR-d6-FWz" collectionClass="NSMutableArray" id="Dej-xa-FOu"/>
+                        <outletCollection property="guessButtons" destination="wQC-BC-Jf0" collectionClass="NSMutableArray" id="0Mz-iY-onQ"/>
+                        <outletCollection property="guessButtons" destination="zcg-bs-pr3" collectionClass="NSMutableArray" id="2Bs-B5-diq"/>
+                        <outletCollection property="guessButtons" destination="0e2-Ig-cm3" collectionClass="NSMutableArray" id="FEf-3h-a4h"/>
+                        <outletCollection property="guessButtons" destination="eLp-L6-CbW" collectionClass="NSMutableArray" id="sHC-9E-MJy"/>
+                        <outletCollection property="guessButtons" destination="QnC-G2-uU2" collectionClass="NSMutableArray" id="r7K-im-h84"/>
+                        <outletCollection property="guessButtons" destination="qaD-KK-mWU" collectionClass="NSMutableArray" id="2Ne-pM-BUc"/>
+                        <outletCollection property="guessButtons" destination="okr-WD-L9K" collectionClass="NSMutableArray" id="Z7f-K5-49w"/>
+                        <outletCollection property="guessButtons" destination="47l-M2-bYd" collectionClass="NSMutableArray" id="5HJ-aN-2oD"/>
+                        <outletCollection property="guessButtons" destination="GOt-u3-dBW" collectionClass="NSMutableArray" id="D6h-xM-r64"/>
+                        <outletCollection property="guessButtons" destination="0f6-rC-Fhw" collectionClass="NSMutableArray" id="9jk-Io-tuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="73.660714285714278"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="7g6-N5-ieM">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="5Bo-1t-FEz" customClass="ResultViewController" customModule="WordleStrategy3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vg6-bX-9oG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-ll-p9w">
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V62-AG-r8I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V62-AG-r8I" firstAttribute="trailing" secondItem="DTZ-ll-p9w" secondAttribute="trailing" constant="10" id="apU-nz-zMB"/>
+                            <constraint firstItem="DTZ-ll-p9w" firstAttribute="leading" secondItem="V62-AG-r8I" secondAttribute="leading" constant="10" id="i7B-15-Pmx"/>
+                            <constraint firstItem="DTZ-ll-p9w" firstAttribute="top" secondItem="V62-AG-r8I" secondAttribute="top" constant="10" id="lsc-2m-ged"/>
+                            <constraint firstItem="V62-AG-r8I" firstAttribute="bottom" secondItem="DTZ-ll-p9w" secondAttribute="bottom" constant="10" id="ziy-Iy-9OP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultTextView" destination="DTZ-ll-p9w" id="QER-hU-09u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8r-tu-T5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5o3-Pt-ZGe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYc-W2-MPf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sJe-uu-IAt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XTu-qo-RzR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wma-CT-g27" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
